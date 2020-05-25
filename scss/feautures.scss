@@ -1,0 +1,134 @@
+.feautures {
+  padding-top: 125px;
+  padding-bottom: 180px;
+  background-color: whitesmoke;
+  &__title {
+    margin-bottom: 30px;
+    h2 {
+      margin: 0;
+      font-weight: 900;
+      font-size: 42px;
+      text-transform: uppercase;
+    }
+  }
+  &__slider {
+    .slider-item {
+      margin: 0 11px;
+      max-width: 325px;
+      &__img {
+        height: 180px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 40px;
+        //
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        background: #2098d1;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        &:hover {
+          animation-name: jello;
+          animation-duration: 0.2s;
+          animation-iteration-count: 1;
+        }
+      }
+      &__content {
+        padding: 0 15px;
+        margin-bottom: 25px;
+        &-title {
+          text-transform: uppercase;
+          font-weight: 900;
+          margin-bottom: 10px;
+        }
+        &-text {
+          color: #999;
+        }
+      }
+      &__link {
+        padding: 0 15px;
+        text-align: right;
+        a {
+          font-weight: 700;
+          color: orangered;
+          transition: all 0.21s ease-in-out;
+          &:hover {
+            color: turquoise;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      position: relative;
+      bottom: -90px;
+    }
+    .slick-dots button {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: turquoise;
+    }
+    .slick-dots .slick-active button {
+      background-color: tomato;
+    }
+    .slick-dots button::before {
+      display: none;
+    }
+  }
+}
+@media(max-width: 800px){
+  .feautures{
+    padding-top: 60px;
+    padding-bottom: 70px;
+    &__slider{
+      .slider-item {
+        max-width: 100%;
+      }
+      .slick-dots {
+        bottom: -50px;
+      }
+    }
+  }
+}
+@media(max-width: 414px){
+  .feautures{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    &__title {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    &__slider{
+      .slider-item {
+        max-width: 414px;
+        &__img {
+          max-height: 180px;
+        }
+        &__content {
+          padding: 0 15px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 320px){
+  .feautures{
+    &__title {
+      h2 {
+        font-size: 32px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1020px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+.container-mini {
+  max-width: 770px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+
+@import "header.scss";
+@import "feautures.scss";
+@import "best.scss";
+@import "article.scss";
+@import "form.scss";
+@import "footer.scss";

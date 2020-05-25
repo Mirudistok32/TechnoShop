@@ -1,0 +1,106 @@
+.best {
+  padding-top: 90px;
+  padding-bottom: 125px;
+  background-color: burlywood;
+  background-image: url("./../assets/img/bg2.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+  &__title {
+    h2 {
+      color: whitesmoke;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    img {
+      display: block;
+      border-radius: 4px;
+      max-height: 410px;
+      &:hover {
+        animation-name: pulse;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+      }
+    }
+    &-text {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 22px;
+      color: whitesmoke;
+      span {
+        color: snow;
+        font-weight: 700;
+      }
+      svg {
+        color: tomato;
+        margin-right: 10px;
+        transition: all 0.21s ease-in-out;
+      }
+      a {
+        color: tomato;
+        font-weight: 600;
+        svg {
+          color: tomato;
+        }
+        &:hover {
+          display: block;
+          color: turquoise;
+          animation-name: headShake;
+          animation-duration: 0.9s;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1040px) {
+  .best {
+    &__content {
+      flex-direction: column;
+      img {
+        max-height: 410px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 414px) {
+  .best {
+    padding-bottom: 90px;
+    &__content {
+      flex-direction: column;
+      img {
+        max-height: 210px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .best {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__content {
+      flex-direction: column;
+      img {
+        max-height: 210px;
+        width: 100%;
+      }
+    }
+  }
+}

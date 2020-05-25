@@ -1,0 +1,134 @@
+.article {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: rgb(221, 235, 240);
+  &__top {
+    color: #666;
+    margin-bottom: 80px;
+    &-wrapper {
+      display: flex;
+      margin-bottom: 40px;
+      img {
+        border-radius: 4px;
+      }
+      & > img {
+        max-height: 300px;
+      }
+    }
+    &-content {
+      padding: 25px 20px;
+      h5 {
+        margin: 0;
+        font-size: 23px;
+        font-weight: 900;
+      }
+      p {
+        font-size: 17px;
+      }
+      .top-content__img {
+        display: flex;
+        justify-content: space-around;
+        img {
+          height: 80px;
+        }
+      }
+    }
+  }
+  &__body {
+    color: #666;
+    margin-bottom: 80px;
+    h4 {
+      color: #000;
+      margin: 0;
+      font-size: 23px;
+      font-weight: 900;
+    }
+    img {
+      border-radius: 4px;
+      width: 100%;
+    }
+    &-text {
+      font-size: 21px;
+      padding-left: 10px;
+    }
+  }
+  &__slider {
+    margin: 0 auto;
+    &-item {
+      display: flex;
+      justify-content: center;
+      img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+      }
+    }
+    .slick-dots {
+      li {
+        margin: 0 5px;
+        height: 8px;
+        width: 40px;
+        border-radius: 4px;
+        background-color: navy;
+        overflow: hidden;
+      }
+    }
+    .slick-dots button {
+      height: inherit;
+      width: inherit;
+    }
+    .slick-dots .slick-active button {
+      background-color: tomato;
+    }
+    .slick-dots button::before {
+      display: none;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .article {
+    &__top {
+      margin-bottom: 40px;
+      animation-name: fadeIn;
+      &-wrapper {
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+    }
+    &__body {
+      animation-name: fadeIn;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .article {
+    &__top {
+      margin-bottom: 40px;
+      animation-name: fadeIn;
+      &-wrapper {
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+    }
+    &__body {
+      animation-name: fadeIn;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .article {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    &__top {
+      margin-bottom: 30px;
+      &-wrapper {
+        margin-bottom: 10px;
+      }
+    }
+    &__body {
+      margin-bottom: 30px;
+    }
+  }
+}
